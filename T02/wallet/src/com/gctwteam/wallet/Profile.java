@@ -1,22 +1,12 @@
 package com.gctwteam.wallet;
 
-public class Profile extends User{
-    String name;
-    String email;
+public class Profile {
 
-    public String getName() {
-        return name;
+    void showProfile(String email){
+    //ou void showPrifile(User usuario){}
+        //buscar os dados no banco atraves do email ou user
+        //e retornar todos os dados
+        System.out.println(email);
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 }

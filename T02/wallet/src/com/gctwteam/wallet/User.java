@@ -1,25 +1,48 @@
 package com.gctwteam.wallet;
 
 public class User {
-    String username;
-    String userPass;
+    private String name;
+    private String userName;
+    private String password;
+    private String email;
+    private String image;
 
-
-    public String getUsername() {
-        return username;
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public String getUserName() {
+        return userName;
+    }
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public String getUserPass(){
-        return  userPass;
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public void setUserPass(String userPass) {
-        this.userPass = userPass;
+    public String getEmail() {
+        return email;
     }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getImage() {
+        return image;
+    }
+    public void setImage(String image) {
+        this.image = image;
+    }
+
 
 }
+
 
