@@ -1,7 +1,6 @@
 package com.gctwteam.wallet;
 
 public class Earning {
-
     private float value;
     private String title;
     private String type;
@@ -38,4 +37,14 @@ public class Earning {
     public void setBank(String bank) {
         this.bank = bank;
     }
+
+    public void addEarning(Earning earning, BankAccount account, float value){
+
+        System.out.println("Add Na conta");
+    }
+
+    public void removeEarning(Earning earning, BankAccount account, float value){
+
+        System.out.println("Remover registro");
+    }    
 }

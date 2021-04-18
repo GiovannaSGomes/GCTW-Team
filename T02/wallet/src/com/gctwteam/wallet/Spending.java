@@ -37,4 +37,13 @@ public class Spending {
     public void setPaymentMethod(String paymentMethod) {
         this.paymentMethod = paymentMethod;
     }
+    public void addSpending(Spending spending, BankAccount account, float value){
+
+        System.out.println("Subtrair da conta");
+    }
+
+    public void removeSpending(Spending spending, BankAccount account, float value){
+
+        System.out.println("Remover registro");
+    }
 }

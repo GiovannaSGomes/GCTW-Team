@@ -3,10 +3,10 @@ package com.gctwteam.wallet;
 import java.util.Date;
 
 public class Notification {
-    String title;
-    String description;
-    Date initialDate;
-    Date dueDate;
+    private String title;
+    private String description;
+    private Date initialDate;
+    private Date dueDate;
 
     public String getTitle() {
         return title;

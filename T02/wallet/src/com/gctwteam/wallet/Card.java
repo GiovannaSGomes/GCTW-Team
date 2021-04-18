@@ -1,8 +1,8 @@
 package com.gctwteam.wallet;
 
 public class Card {
-    String brand;
-    Integer number;
+    private String brand;
+    private Integer number;
 
     public String getBrand(){
         return brand;
@@ -19,5 +19,15 @@ public class Card {
     public void setNumber(Integer number) {
         this.number = number;
     }
+
+    public void addCard(Card cartao){
+
+        System.out.println("ADICIONAR AO BANCO");
+   }
+
+   public void removeCard(Card cartao){
+
+       System.out.println("IMPLEMENTAR LOGICA");
+   }
 }
 

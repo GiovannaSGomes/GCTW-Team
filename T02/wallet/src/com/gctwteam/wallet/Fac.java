@@ -1,9 +1,9 @@
 package com.gctwteam.wallet;
 
 public class Fac {
-    String title;
-    String description;
-    String answer;
+    private String title;
+    private String description;
+    private String answer;
 
     public String getTitle() {
         return title;

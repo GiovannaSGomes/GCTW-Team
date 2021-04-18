@@ -7,7 +7,7 @@ class main {
 	public static void main(String[] args){
 		//Faq test
 		Fac faq = new Fac();
-		faq.setTitle("O que é ações?");
+		faq.setTitle("O que são ações?");
 		faq.setAnswer(
 				"Ações, também chamadas simplesmente de \"papéis\", são as parcelas que compõem o capital" +
 						"social de uma empresa, ou seja, são as unidades de títulos emitidas por sociedades anônimas."

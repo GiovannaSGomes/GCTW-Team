@@ -1,9 +1,9 @@
 package com.gctwteam.wallet;
 
 public class BankAccount {
-    String type;
-    String institution;
-    Float initialBalance;
+    private String type;
+    private String institution;
+    private Float initialBalance;
 
     public String getType() {
         return type;
@@ -28,4 +28,16 @@ public class BankAccount {
     public void setInitialBalance(Float initialBalance) {
         this.initialBalance = initialBalance;
     }
+
+    public void addAccount(BankAccount account){
+
+        System.out.println("ADICIONAR AO BANCO");
+    }
+
+    public void removeAccount(BankAccount account){
+
+        System.out.println("REMOVER AO BANCO");
+    }
+
+
 }
