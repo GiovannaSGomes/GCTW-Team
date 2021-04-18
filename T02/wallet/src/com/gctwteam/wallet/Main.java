@@ -1,10 +1,12 @@
 package com.gctwteam.wallet;
 
 import com.gctwteam.wallet.*;
+import java.util.Scanner;
 
 class main {
 
 	public static void main(String[] args){
+		
 		//Faq test
 		Fac faq = new Fac();
 		faq.setTitle("O que são ações?");
@@ -17,12 +19,31 @@ class main {
 
 		//User test
 		User user = new User();
+		//leitura de dados
+		Scanner ler = new Scanner(System.in);
+		
+		
+		System.out.println("Nome: ");
+		String name = ler.nextLine();
+		
+		System.out.println("Email: ");
+		String email = ler.nextLine();
+		
+		System.out.println("User: ");
+		String username = ler.nextLine();
+		
+		System.out.println("Password: ");
+		String pass = ler.nextLine();
+		
+		System.out.println("Image: ");
+		String img = ler.nextLine();
+		
 
-		user.setName("Cris");
-		user.setEmail("cris@gmail.com");
-		user.setUserName("@cris");
-		user.setPassword("abc123");
-		user.setImage("google.com");
+		user.setName(name);
+		user.setEmail(email);
+		user.setUserName(username);
+		user.setPassword(pass);
+		user.setImage(img);
 
 		System.out.println("\n### user ###");
 		System.out.println(user.getName());
