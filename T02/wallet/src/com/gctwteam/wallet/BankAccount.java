@@ -3,7 +3,7 @@ package com.gctwteam.wallet;
 public class BankAccount {
     private String type;
     private String institution;
-    private Float initialBalance;
+    private Double initialBalance;
 
     public String getType() {
         return type;
@@ -21,11 +21,11 @@ public class BankAccount {
         this.institution = institution;
     }
 
-    public Float getInitialBalance() {
+    public Double getInitialBalance() {
         return initialBalance;
     }
 
-    public void setInitialBalance(Float initialBalance) {
+    public void setInitialBalance(Double initialBalance) {
         this.initialBalance = initialBalance;
     }
 

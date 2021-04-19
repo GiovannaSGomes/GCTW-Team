@@ -6,19 +6,56 @@ public class Main {
 	public static void main(String[] args){
 		
 		Menu menu = new Menu();
-		String[] fields = {"Bank Accounts", "Cards", "Faq", "Profile"};
+		String[] fields = {"Bank Accounts", "Earnings", "Spendings", "Cards", "Faq", "Profile"};
 		menu.setFields(fields);
 		
-		Earning earning = new Earning();
-		earning.setBank("Nubank");
-		earning.setTitle("Salario");
-		earning.setValue(1200);
+		//Dados abstratos
+		BankAccount bankAccount1 = new BankAccount();
+		bankAccount1.setInitialBalance(1200.00);
+		bankAccount1.setInstitution("Nubank");
+		bankAccount1.setType("Corrente");
 		
-		Spending spending = new Spending();
-		spending.setPaymentMethod("Debito da conta");
-		spending.setTitle("Gasolina");
-		spending.setValue(50);
+		BankAccount bankAccount2 = new BankAccount();
+		bankAccount2.setInitialBalance(600.00);
+		bankAccount2.setInstitution("Bradesco");
+		bankAccount2.setType("Poupanca");
 		
+		BankAccount[] bankAccounts = {bankAccount1, bankAccount2};
+		
+		Card card1 = new Card();
+		card1.setBrand("Mastercard");
+		card1.setNumber("5500 6600 7700 8800");
+		
+		Card card2 = new Card();
+		card2.setBrand("Visa");
+		card2.setNumber("5500 6600 7700 9900");
+		
+		Card[] cards = {card1, card2};
+		
+		Earning earning1 = new Earning();
+		earning1.setBank("Nubank");
+		earning1.setTitle("Salario");
+		earning1.setValue(1200);
+		
+		Earning earning2 = new Earning();
+		earning2.setBank("Nubank");
+		earning2.setTitle("PLR");
+		earning2.setValue(2000);
+		
+		Earning[] earnings = {earning1, earning2};
+		
+		Spending spending1 = new Spending();
+		spending1.setPaymentMethod("Debito da conta");
+		spending1.setTitle("Gasolina");
+		spending1.setValue(50);
+		
+		Spending spending2 = new Spending();
+		spending2.setPaymentMethod("Debito da conta");
+		spending2.setTitle("Compras na padaria");
+		spending2.setValue(20);
+		
+		Spending[] spendings = {spending1, spending2};
+				
 		Faq faq = new Faq();
 		faq.setTitle("*** Faq - Frequently asked questions ***");
 		faq.setDescription("O que são ações?");
@@ -57,8 +94,12 @@ public class Main {
 		profile.setName(name);
 		profile.setFaq(faq);
 		profile.setEmail(email);
-		profile.setEarning(earning);
-		profile.setSpending(spending);
+		profile.setEarnings(earnings);
+		profile.setSpendings(spendings);
+		profile.setBankAccounts(bankAccounts);
+		profile.setCards(cards);
+		profile.setBalance(profile.calculateBalance());
+		
 		
 		menu.setProfile(profile);
 		

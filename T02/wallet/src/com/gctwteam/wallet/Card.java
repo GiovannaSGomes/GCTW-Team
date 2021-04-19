@@ -2,7 +2,7 @@ package com.gctwteam.wallet;
 
 public class Card {
     private String brand;
-    private Integer number;
+    private String number;
 
     public String getBrand(){
         return brand;
@@ -12,11 +12,11 @@ public class Card {
         this.brand = brand;
     }
 
-    public Integer getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(Integer number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 
