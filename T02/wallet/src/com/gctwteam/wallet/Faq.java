@@ -1,6 +1,6 @@
 package com.gctwteam.wallet;
 
-public class Fac {
+public class Faq {
     private String title;
     private String description;
     private String answer;
@@ -27,5 +27,12 @@ public class Fac {
 
     public void setAnswer(String answer) {
         this.answer = answer;
+    }
+    
+    @Override
+    public String toString() {
+    	return title + "\n\n"
+    			+ "Pergunta: " + description + "\n"
+    			+ "Resposta: " + answer + "\n";
     }
 }

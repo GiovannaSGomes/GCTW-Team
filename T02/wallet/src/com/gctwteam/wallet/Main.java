@@ -1,150 +1,71 @@
 package com.gctwteam.wallet;
-
-import com.gctwteam.wallet.*;
 import java.util.Scanner;
 
-class main {
+public class Main {
 
 	public static void main(String[] args){
 		
-		//Faq test
-		Fac faq = new Fac();
-		faq.setTitle("O que são ações?");
+		Menu menu = new Menu();
+		String[] fields = {"Bank Accounts", "Cards", "Faq", "Profile"};
+		menu.setFields(fields);
+		
+		Earning earning = new Earning();
+		earning.setBank("Nubank");
+		earning.setTitle("Salario");
+		earning.setValue(1200);
+		
+		Spending spending = new Spending();
+		spending.setPaymentMethod("Debito da conta");
+		spending.setTitle("Gasolina");
+		spending.setValue(50);
+		
+		Faq faq = new Faq();
+		faq.setTitle("*** Faq - Frequently asked questions ***");
+		faq.setDescription("O que são ações?");
 		faq.setAnswer(
 				"Ações, também chamadas simplesmente de \"papéis\", são as parcelas que compõem o capital" +
 						"social de uma empresa, ou seja, são as unidades de títulos emitidas por sociedades anônimas."
 		);
-		System.out.println(faq.getTitle());
-		System.out.println(faq.getAnswer());
 
-		//User test
-		User user = new User();
+		System.out.println("*** Wallet ***");
+		System.out.println("\nCadastre-se:");
+		
+		
 		//leitura de dados
+		User user = new User();
+		Profile profile = new Profile();
+		
 		Scanner ler = new Scanner(System.in);
 		
-		
-		System.out.println("Nome: ");
+		System.out.print("Nome: ");
 		String name = ler.nextLine();
 		
-		System.out.println("Email: ");
+		System.out.print("Email: ");
 		String email = ler.nextLine();
 		
-		System.out.println("User: ");
+		System.out.print("User: ");
 		String username = ler.nextLine();
 		
-		System.out.println("Password: ");
+		System.out.print("Password: ");
 		String pass = ler.nextLine();
 		
-		System.out.println("Image: ");
-		String img = ler.nextLine();
 		
-
-		user.setName(name);
-		user.setEmail(email);
-		user.setUserName(username);
+		user.setUsername(username);
 		user.setPassword(pass);
-		user.setImage(img);
-
-		System.out.println("\n### user ###");
-		System.out.println(user.getName());
-		System.out.println(user.getEmail());
-		System.out.println(user.getUserName());
-		System.out.println(user.getPassword());
-		System.out.println(user.getImage());
-
-		//signUp teste
-		System.out.println("\n#### signUp ###");
-		SignUp signUp = new SignUp();
-		signUp.signUp(user);
-		//System.out.println(signUp.signUp());
-
-		//profile test
-		System.out.println("\n### Profile ###");
-		Profile profile = new Profile();
-		profile.showProfile("aaa@aaa.com");
-
-		//card test
-		System.out.println("\n### Card ###");
-		Card card = new Card();
-
-		card.setBrand("Visa");
-		card.setNumber(123456789);
-
-		System.out.println(card.getBrand());
-		System.out.println(card.getNumber());
-
-		//addCard test
-		System.out.println("\n### addCart ###");
-		CardMethods cardMethods = new CardMethods();
-
-		cardMethods.addCard(card);
-
-		//removeCard test
-		System.out.println("\n### addCard ###");
-		CardMethods cardMethods2 = new CardMethods();
-
-		cardMethods2.removeCard(card);
-
-		//BankAccount teste
-		System.out.println("\n### BankAccount ###");
-		BankAccount bankAccount = new BankAccount();
-
-		bankAccount.setInstitution("NuBank");
-		bankAccount.setInitialBalance(100.20f);
-
-		System.out.println(bankAccount.getInstitution());
-		System.out.println(bankAccount.getInitialBalance());
-
-		//MethodsBankAccount test
-		System.out.println("\n### MethodsBankAccount ###");
-
-		BankAccountMethods bankAccountMethods = new BankAccountMethods();
-
-		bankAccountMethods.addAccount(bankAccount);
-		bankAccountMethods.removeAccount(bankAccount);
-
-		//Spending teste
-		Spending spending = new Spending();
-
-		spending.setValue(100);
-		spending.setTitle("Teste");
-		spending.setPaymentMethod("D");
-		spending.setType("sei la");
-
-		System.out.println(spending.getValue());
-		System.out.println(spending.getTitle());
-		System.out.println(spending.getPaymentMethod());
-		System.out.println(spending.getType());
-
-		//SpendingMethods
-		System.out.println("\n### SpendingMethods ###");
-
-		SpendingMethods spendingMethods = new SpendingMethods();
-
-		spendingMethods.addSpending(spending, bankAccount, 100);
-		spendingMethods.removeSpending(spending, bankAccount, 100);
-
-		//Earning test
-		System.out.println("\n### Earning ###");
-
-		Earning earning = new Earning();
-
-		earning.setBank("a");
-		earning.setTitle("a");
-		earning.setType("a");
-		earning.setValue(100);
-
-		System.out.println(earning.getType());
-		System.out.println(earning.getTitle());
-		System.out.println(earning.getBank());
-		System.out.println(earning.getValue());
-
-		//EarningMethods
-		System.out.println("\n### EarningMethods ###");
-
-		EarningMethods earningMethods = new EarningMethods();
-
-		earningMethods.addSpending(earning, bankAccount, 100);
-		earningMethods.removeSpending(earning, bankAccount, 100);
+		
+		profile.setUsername(username);
+		profile.setName(name);
+		profile.setFaq(faq);
+		profile.setEmail(email);
+		profile.setEarning(earning);
+		profile.setSpending(spending);
+		
+		menu.setProfile(profile);
+		
+		System.out.print(menu);
+		int option = ler.nextInt();
+		
+		System.out.print(profile.getInfos(fields[option]));
+		
 	}
 }

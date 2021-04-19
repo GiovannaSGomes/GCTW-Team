@@ -3,7 +3,6 @@ package com.gctwteam.wallet;
 public class Spending {
     private float value;
     private String title;
-    private String type;
     private String paymentMethod;
 
     public float getValue() {
@@ -20,14 +19,6 @@ public class Spending {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 
     public String getPaymentMethod() {

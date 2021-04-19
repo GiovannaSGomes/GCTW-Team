@@ -1,24 +1,14 @@
 package com.gctwteam.wallet;
 
 public class User {
-    private String name;
-    private String userName;
+    private String username;
     private String password;
-    private String email;
-    private String image;
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String name) {
+        this.username = name;
     }
 
     public String getPassword() {
@@ -27,22 +17,6 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    public String getEmail() {
-        return email;
-    }
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getImage() {
-        return image;
-    }
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-
 }
 
 
